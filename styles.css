@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e2e8f0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #1992d4;
+    color: white;
+    padding: 20px;
+    grid-row: 1 / -1;
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+    width: 600px;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #e2e8f0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+}
+
+.welcome-message {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.action-buttons {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.action-buttons button {
+    background-color: #1992d4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 2 / span 2;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 8px solid #f0b429;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.announcements, .trending {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.announcements {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.trending {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.icon {
+    margin-right: 10px;
+}
